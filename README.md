@@ -1,6 +1,10 @@
 # vue-fashioncart
 一个vue时尚购物车项目，体验不一样的交互操作。
 
+## Demo
+
+https://cooooder.github.io/vue-fashioncart/dist/#/
+
 ## 效果实现：
 
 > (1) 模拟复选框
