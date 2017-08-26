@@ -1,0 +1,26 @@
+[
+ {
+	 "id":0,
+	 "categoryName":"新品"
+ },
+  {
+	 "id":1,
+	 "categoryName":"连衣裙"
+ },
+  {
+	 "id":2,
+	 "categoryName":"T恤"
+ },
+  {
+	 "id":3,
+	 "categoryName":"衬衫"
+ },
+  {
+	 "id":4,
+	 "categoryName":"包包"
+ },
+ {
+	 "id":5,
+	 "categoryName":"饰品"
+ }
+ ]

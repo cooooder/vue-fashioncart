@@ -1,0 +1,397 @@
+.el-menu p{
+	color:#F9FAFC;
+	float: right;
+	margin-right:20%;
+}
+.el-row {
+    margin-bottom: 2px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+.wrapper{
+	border-top: 1px solid #f0f0f0;
+}
+ .sidebar{
+ 		
+	 border-right: 1px solid #f0f0f0;
+  }
+ .aside{
+ 	padding-left: 45px;
+ }
+.sidebar h3{
+	font-size: 14px;
+	color: #262626;
+	font-weight: 400;
+}
+#cart .empty {
+    font-style: italic;
+    color: #a0a3ab;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+#cart img{
+	
+	float: left;
+	width: 50px;
+	height: auto;
+	border: 1px solid #edeff0;
+	margin-right: 10px;
+}
+.img-wrapper{
+	
+	overflow: hidden;
+	
+}
+.img-wrapper:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.cart-item{
+	position: relative;
+	height: 95px;
+	margin-bottom: 10px;
+}
+.cart-item span {
+    color: #393c45;
+    display: block;
+    font-size: 14px;
+    padding: 15px 0px;
+    
+}
+.cart-item strong {
+    color: #F050B7;
+    font-size: 16px;
+    
+}
+.cart-item .el-icon-close{
+	color: #cececf;
+    float: right;
+    margin-right: 10px;
+    transform: scale(.7);
+    cursor:pointer;
+}
+.cart-item .line{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #edeff0;
+    height: 1px;
+    width: 195px;
+}
+.buy ul{
+	list-style: none;
+}
+.buy ul li{
+	font-size:14px;
+	font-weight:400;
+	list-style:none;
+	padding: 7px 0 7px 23px;
+}
+.buy li span{
+	float:left;
+	width:11px;
+	height:11px;
+	margin-left:-23px;
+	margin-top:4px;
+	border: 1px solid #d1d3d7;
+	position:relative;	
+}
+.sizes li span, .categories .sizes li{
+	transition: all 300ms ease-out;
+}
+.buy li a{
+	color:#676a74;
+	text-decoration:none;	
+	transition: all 300ms ease-out;
+}
+.buy li a:hover{	
+	color:#222;
+	transition: all 300ms ease-out;
+}
+.buy  a:hover span{ 	
+	border-color:#a6aab3;	
+}
+.sizes a:hover span, .categories a:hover span{	
+	border-color:#a6aab3;
+	transition: all 300ms ease-out;
+}
+.buy a span span{
+	border:none;
+	margin:0;
+	float:none; 
+	position:absolute;
+	top:0;
+	left:0;
+	}
+.buy a .x{
+	display:block;
+	width:0px;	 
+	height:2px;
+	background:#f050b7;
+	top:6px;
+	left:2px;	
+    transform: rotate(45deg);	
+    transition: all 100ms ease-in;
+}
+.buy a .x.animation{
+	width:4px;
+}
+.buy a .y{
+	display:block;
+	width:0px; 
+	height:2px;
+	background:#f050b7;
+	top:4px;
+	left:3px;	
+    transform: rotate(135deg);
+    transition: all 100ms ease-out;	
+}
+.buy a .y.animation{
+	width:8px;
+    
+}
+.buy .checked span{
+	border-color:#8d939f;
+}
+.colors ul, .sizes ul{
+	float:left; width:130px;	
+}
+.colors ul li{padding-left:21px;}
+.colors a span{
+	border:none;
+	position:relative;
+	border-radius:100%;
+	background-color:#eae3d3;
+	width:13px;
+	height:13px;
+	margin-left:-20px;
+}
+.colors a:hover span{
+	width:15px;
+	height:15px;
+	margin-top:3px;
+	margin-left:-21px;
+}
+.product p{
+	font-size: 14px;
+	color:#5d5f68;
+	padding: 18px 60px;
+}
+.el-card{
+	margin: 10px 15px;
+}
+  .bg-purple {
+    background: rgba(153, 169, 191, 0.07);
+  }
+
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+    line-height: 100px;
+    text-align: center;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
+  .el-card__body{
+  	position: relative;
+  	height: 646px;
+  }
+  @keyframes addCart{
+  	0%{transform: scale(.75) translateY(60px);}
+  	50%{transform: scale(.50) translateY(60px);}
+  	100%{transform: scale(.50) translateY(120px);opacity: 0;}
+  }
+
+  .info{
+  	position: absolute;
+  	top:560px;
+  	left:0;
+  	height:70px;
+  	width:275px;
+  	overflow: hidden;
+  	background-color: #FFFFFF;
+  }
+  .info-hover{
+	top:360px;
+	height: 258px;
+	transition: all .2s ease-out;		
+  	}
+  .el-col .hidden{
+  	display: none;
+  }
+ 
+  .el-col .close{
+  	visibility:hidden;
+  	position: absolute;
+  	top:0px;
+  	left:0px;
+  	width: 333px;
+  	height: 533px;
+  }
+  .el-col .clone{
+  	visibility: visible;
+  	top:-150px;
+  	left:-190px;
+  	width: 33.3px;
+  	height: 53.3px;
+  	transition: all 1s ease-out;
+  }
+  .el-col .animate{
+  	animation: addCart .3s ease-in both;
+  }
+  .el-card__body .mask{
+  	display: block;
+  	position: absolute;
+  	top:0px;
+  	left: 0px;
+  	height:360px;
+  	width:300px;
+  	background-color: rgba(68, 194, 141,.3);
+  	
+  }
+
+  .el-card__body .mask a{
+  	display: block;
+  	position: absolute;
+  	top:0px;
+  	left: 0px;
+  	right: 0px;
+  	bottom: 0px;
+  	margin: auto;
+  	width: 152px;
+  	height: 30px;
+  	line-height: 30px;
+  	font-size: 15px;
+  	font-weight: 700;
+  	text-align: center;
+  	text-decoration: none;
+  	color: #FFFFFF;
+  	padding: 10px;
+  	border: 2px solid #FFFFFF;
+  }
+
+  .el-card__body .mask .c1{
+  	top:-60px;
+  }
+  .el-card__body .mask .c2{
+  	top:90px;
+  }
+  .el-card__body .mask a:hover{
+  	color: rgba(68, 194, 141,.7);
+  	background-color: #FFFFFF;
+  }
+  .info .name{
+  	color:#393c45;
+  	font-size: 16px;
+  	cursor:pointer;
+  }
+.info .price{
+	color:#F050B7;
+	font-size: 22px;
+	float: right;
+	padding: 15px 10px;
+}
+.info p{
+	text-align: left;
+	padding: 5px 10px;
+}
+.options strong {
+	color:#393c45;
+  	font-size: 16px;
+}
+.options span{
+	color: #969699;
+    font-size: 14px;
+    display: block;
+    padding: 10px 0px;
+}
+div.colors:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+div.colors div {
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    float: left;
+}
+div.colors div i {
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 50%;
+}
+div.c-blue i {
+    background: #6e8cd5;
+}
+div.c-red i {
+    background: #f56060;
+}
+div.c-white i {
+    background: #fff;
+    border: 1px solid #e8e9eb;
+}
+div.c-green i {
+    background: #44c28d;
+}
+.el-col .make3d{
+	position: relative;
+	height: 100%;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all .2s ease-out;
+}
+.el-col .flip180 {
+	transform: rotateY( 180deg );
+}
+.el-col .back{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.back ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:999px;
+	/*实现幻灯片切换效果*/
+	transition: all .3s ease-out;
+	
+}
+.back ul li{
+	float: left;	
+}
+.make3d .el-icon-close{
+	color: #8b8b8d;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    transform: scale(.7);
+    cursor:pointer;
+}
+.make3d .el-icon-arrow-left{
+	color: #8b8b8d;
+    position: absolute;
+    top:250px;
+    left: 10px;
+    cursor:pointer;
+}
+.make3d .el-icon-arrow-right{
+	color: #8b8b8d;
+    position: absolute;
+    top:250px;
+    left: 275px;
+    cursor:pointer;
+}
