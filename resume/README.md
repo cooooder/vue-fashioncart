@@ -73,8 +73,8 @@ Node.js+Express+MongoDB+Mongoose+ES6+Vue2.0全家桶
 
 |Name	|Type |SRC 	|Demo	|Description |
 |:-----:|:-----:|:---------:|:----------:|
-|vue-fashioncart |**Vue组件**| <a href="https://github.com/cooooder/vue-fashioncart" target="_blank">项目源码</a> | <a href="https://cooooder.github.io/vue-fashioncart/dist/#/" target="_blank">演示</a>| 提升购物交互操作体验|
-|cursor-follow-mask|**jQuery插件**|<a href="https://github.com/cooooder/cursor-follow-mask" target="_blank">项目源码</a> |<a href="https://cooooder.github.io/cursor-follow-mask/" target="_blank">演示</a> |能够感知鼠标方向的jQuery图片特效插件 |
+|vue-fashioncart |**Vue组件**| <a href="https://github.com/cooooder/vue-fashioncart" target="_blank">项目源码</a> | <a href="https://cooooder.github.io/vue-fashioncart/dist/#/" target="_blank">演示</a>（仅限PC）| 提升购物交互操作体验|
+|cursor-follow-mask|**jQuery插件**|<a href="https://github.com/cooooder/cursor-follow-mask" target="_blank">项目源码</a> |<a href="https://cooooder.github.io/cursor-follow-mask/" target="_blank">演示</a>（仅限PC） |能够感知鼠标方向的jQuery图片特效插件 |
 
 
 ### 工作经历
