@@ -48,6 +48,8 @@ Email:hoodoor@qq.com
 
 Node.js+Express+MongoDB+Mongoose+ES6+Vue2.0全家桶
 
+项目地址：<a href="https://github.com/cooooder/xmall" target="_blank">https://github.com/cooooder/xmall</a>
+
 项目经验及收获：
 - <input type="checkbox" checked /> 前端部分
     - <input type="checkbox" checked /> 图片懒加载
