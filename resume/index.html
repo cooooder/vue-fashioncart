@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>简历</title>
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <style type="text/css">
+  	img{
+  		width: 200px;
+  		height: 200px;
+  	}
+  	.sidebar img{
+  		width: 150px;
+  		height: 150px;
+  		border-radius: 50%;
+  	}
+  	@keyframes runcircle{
+  		from{
+  			transform:rotateZ(0deg);
+  		}
+  		to{
+  			transform:rotateZ(360deg);
+  		}
+  	}
+  	@-moz-keyframes runcircle{
+  		from{
+  			transform:rotateZ(0deg);
+  		}
+  		to{
+  			transform:rotateZ(360deg);
+  		}
+  	}
+  	@-ms-keyframes runcircle{
+  		from{
+  			transform:rotateZ(0deg);
+  		}
+  		to{
+  			transform:rotateZ(360deg);
+  		}
+  	}
+  	@-webkit-keyframes runcircle{
+  		from{
+  			transform:rotateZ(0deg);
+  		}
+  		to{
+  			transform:rotateZ(360deg);
+  		}
+  	}
+  	@keyframes runreverse{
+  		from{
+  			transform:rotateZ(360deg);
+  		}
+  		to{
+  			transform:rotateZ(0deg);
+  		}
+  	}
+  	@-moz-keyframes runreverse{
+  		from{
+  			transform:rotateZ(360deg);
+  		}
+  		to{
+  			transform:rotateZ(0deg);
+  		}
+  	}
+  	@-ms-keyframes runreverse{
+  		from{
+  			transform:rotateZ(360deg);
+  		}
+  		to{
+  			transform:rotateZ(0deg);
+  		}
+  	}
+  	@-webkit-keyframes runreverse{
+  		from{
+  			transform:rotateZ(360deg);
+  		}
+  		to{
+  			transform:rotateZ(0deg);
+  		}
+  	}
+  	.container{
+  		position: absolute;
+  		top:120vh;
+  		left:60vw;
+  		width:450px;
+  		height:450px;
+  		background-color: rgba(186, 179, 182, 0);
+  		text-align: center;
+  		color: #fff;
+  	}
+  	@media print{.container{display:none}}
+  	@media screen and (max-width:768px){
+  		.container{
+	  		top:300vmin;
+	  		left:0vw;
+	  		width:100vmin;
+	  		height:100vmin;
+	  		
+	  	}
+  	}
+  	.container__wrap{
+  		position: absolute;
+  		top:0;
+  		left: 0;
+  		right: 0;
+  		bottom: 0;
+  		margin: auto;  		
+  		width:90%;
+  		height:90%;
+  		border: 1px dashed #3493a2;
+  		border-radius: 50%;
+  		animation: runreverse 8s  linear both infinite;
+  		-webkit-animation: runreverse 8s  linear both infinite;
+  	}
+  	.inner-item,.wrap-item{
+  		position: absolute;
+  		top:0;
+  		left: 0;
+  		right: 0;
+  		bottom: 0;
+  		margin: auto;  		
+  		border: 1px solid #fff;
+  		border-radius: 50%;
+  		overflow: hidden;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  	}
+  	.wrap-item{
+  		width:15%;
+  		height:15%;
+  	}
+  	.container__wrap__item1{
+  		transform: rotate(60deg) translateX(330%) rotateZ(-60deg);
+  		background-color: rgba(76,157,160,0.8);
+  	}
+  	.container__wrap__item2{
+  		transform:  rotate(120deg) translateX(330%) rotateZ(-120deg);
+  		background-color: rgba(193,131,106,0.8);
+  	}
+  	.container__wrap__item3{
+  		transform:  rotate(180deg) translateX(330%) rotateZ(-180deg);
+  		background-color: rgba(147,147,189,0.8);
+  	}
+  	.container__wrap__item4{
+  		transform:  rotate(240deg) translateX(330%) rotateZ(-240deg);
+  		background-color:rgba(238,215,163,0.8);
+  	}
+  	.container__wrap__item5{
+  		transform:  rotate(300deg) translateX(330%) rotateZ(-300deg);
+  		background-color: rgba(117,148,179,0.8);
+  	}
+  	.container__wrap__item6{
+  		transform:  rotate(360deg) translateX(330%) rotateZ(-360deg);
+  		background-color:rgba(171,209,220,0.8);
+  	}
+  	.wrap-item p{
+  		animation: runcircle 8s linear infinite both;
+  		-webkit-animation: runcircle 8s linear infinite both;
+  	}
+  	.container__inner{
+  		position: absolute;
+  		top:0;
+  		left: 0;
+  		right: 0;
+  		bottom: 0;
+  		margin: auto;  		
+  		width:50%;
+  		height:50%;
+  		border: 1px dashed #3493a2;
+  		border-radius: 50%;
+  		animation: runcircle 8s  linear infinite both;
+  		-webkit-animation: runcircle 8s  linear infinite both;
+  	}
+  	.inner-item{
+  		width:40%;
+  		height:40%;
+  	}
+
+  	.container__inner__item1{
+  		transform: translateY(-120%);
+  		background-color: rgba(55, 139, 255, .72);
+  		
+  	}
+  	.container__inner__item2{
+  		transform: translateX(-120%);
+  		background-color: rgba(254, 192, 0, .72);
+  	}
+  	.container__inner__item3{
+  		transform: translateY(120%);
+  		background-color: rgba(199, 63, 28, .72);
+  	}
+  	.container__inner__item4{
+  		transform: translateX(120%);
+  		background-color: rgba(66, 185, 131, .72);
+  	}
+  	.inner-item p{
+  		animation: runreverse 8s linear infinite both;
+  		-webkit-animation: runreverse 8s linear infinite both;
+  	}
+  	@keyframes type{
+  		from{
+  			width:0;
+  		}
+  		to{
+  			width:110%;
+  		}
+  	}
+  	@-moz-keyframes type{
+  		from{
+  			width:0;
+  		}
+  		to{
+  			width:110%;
+  		}
+  	}
+  	@-ms-keyframes type{
+  		from{
+  			width:0;
+  		}
+  		to{
+  			width:110%;
+  		}
+  	}
+  	@-webkit-keyframes type{
+  		from{
+  			width:0;
+  		}
+  		to{
+  			width:110%;
+  		}
+  	}
+  	.typing{
+  		white-space:nowrap;
+  		overflow: hidden;  		
+  		animation: type 5s  steps(384) infinite;
+  		-webkit-animation: type 5s  steps(384,start) infinite;
+  	}
+  </style>
+</head>
+<body>
+	<!--[if lte IE 9]> 
+  <div class="makebrowsergreatagain">
+        <h1>MAKE BROWSER GREAT AGAIN!</h1>
+        <p>检测到您的浏览器过于古老</p>
+        <p>为了更好的体验，请使用最新版本的现代浏览器访问本网站!</p>
+        	<p><a href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&ch=11&tn=98012088_5_dg&wd=%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E8%BD%BD&oq=%25E8%25B0%25B7%25E6%25AD%258C%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8&rsv_pq=ba3a049d000333a3&rsv_t=8c8fg9hv1lynJlJcH5F5oVgzzWBRePnX%2FDzjEcZk3mAqWdR6Mkds5RUAV9zVw9wqP4gUWw&rqlang=cn&rsv_enter=1&rsv_sug2=1&prefixsug=%25E8%25B0%25B7%25E6%25AD%258C%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8&rsp=3&inputT=28218&rsv_sug4=28219" target="_blank">》》点击下载《《</a></p>
+      </div>
+      <style type="text/css">
+        .makebrowsergreatagain {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: #F45757;
+          z-index: 50;
+        }
+        h1 {
+          color: #FFF;
+          line-height: 300px;
+          font-size: 60px;
+          font-style: italic;
+          font-family: Verdana, serif;
+          text-align: center;
+        }
+        p {
+          color: #FFF;
+          width: 100%;
+          text-align: center;
+          font-size: 18px;
+          line-height: 50px;
+        }
+        p a{
+        		color: #FFF;
+        }
+      </style>
+   <![endif]--> 
+	<div class="container">
+		<div class="container__wrap">
+			<div class="container__wrap__item1 wrap-item"><p>H5</p></div>
+			<div class="container__wrap__item2 wrap-item"><p>CSS3</p></div>
+			<div class="container__wrap__item3 wrap-item"><p>Webpack</p></div>
+			<div class="container__wrap__item4 wrap-item"><p>Npm</p></div>
+			<div class="container__wrap__item5 wrap-item"><p>MongoDB</p></div>
+			<div class="container__wrap__item6 wrap-item"><p>Git</p></div>
+		</div>
+		<div class="container__inner">
+			<div class="container__inner__item1 inner-item"><p>Node</p></div>
+			<div class="container__inner__item2 inner-item"><p>ES6</p></div>
+			<div class="container__inner__item3 inner-item"><p>Vue</p></div>
+			<div class="container__inner__item4 inner-item"><p>React</p></div>
+		</div>
+	</div>
+  <div id="app">
+  </div>  
+</body>
+<script>
+  window.$docsify = {
+    name: '简历<br/><br/><img src="./02.jpg" />',
+    repo: '',
+    markdown: {
+	    smartypants: true,
+	    gfm: true,
+		tables: true,
+		breaks: true,
+		pedantic: true,
+		//sanitize: true,
+		smartLists: true,
+	    renderer: {
+	      link: function() {
+	        // ...
+	      }
+	    }
+	  }
+  }
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+</html>
