@@ -22,7 +22,7 @@
   	<el-row :gutter="20" class="wrapper">
   		<el-col :span="5" class="sidebar">
   			<div class="aside">
-  				<h3>购物车 <i class="el-icon-date"></i></h3>
+  				<h3>购物车 <i class="el-icon-date" ref="target"></i></h3>
   				<div id="cart">
   					<span class="empty" v-if="cartFlag">购物车空空如也！</span>
   					<div class="cart-item" v-for="(item,index) in cartList" @mouseenter="check('cart',index)" @mouseleave="deleteFlag=false">
@@ -121,7 +121,7 @@
 				    	</div>
 				      
 				    </el-card>
-				    <img :src="'../src/assets/'+item.images[0]+'.jpg'" class="close" :class="{'clone':copyIndex === index,'animate':copyIndex === index && animateCart}">
+				    <img :src="'../src/assets/'+item.images[0]+'.jpg'" class="close" :class="{'clone':copyIndex === index,'animate':copyIndex === index && animateCart}" ref="clone">
 				  </el-col>
 				</el-row>
   				</div>
@@ -184,6 +184,16 @@ export default {
   			this.slideIndex = index;
   		},
   		add(index,item){
+  			let rect = this.$refs.clone[index];
+  			let cartRect = this.$refs.target;
+  			let height = rect.height/10 + 10;
+  			let width = rect.width/20 - 5;
+  			let top = this.getTop(cartRect) - this.getTop(rect) - height;
+  			let left = this.getLeft(cartRect) - this.getLeft(rect) - width;
+  			
+  			this.$refs.clone[index].style.top = top + 'px';
+  			this.$refs.clone[index].style.left = left + 'px';
+  			
   			this.copyIndex = index;
   			this.cartFlag = false;
 			setTimeout(() => {
@@ -192,9 +202,30 @@ export default {
 			setTimeout(() => {
 				this.copyIndex = '';
 				this.animateCart = false;
+				//需把商品副本位置重置为零
+				this.$refs.clone[index].style.top = 0;
+  				this.$refs.clone[index].style.left = 0;
 				this.cartList.push(item);
 			},1800);
   		},
+  		getTop(element){ 
+			let actualTop = element.offsetTop;
+		　　let current = element.offsetParent;
+		　　　　while (current !== null){
+		　　　　　　actualTop += current.offsetTop;
+		　　　　　　current = current.offsetParent;
+		　　　　}
+		　　　　return actualTop;
+		}, 
+		getLeft(element){ 
+			let actualLeft = element.offsetLeft;
+　　　　		let current = element.offsetParent;
+　　　　		while (current !== null){
+　　　　　　actualLeft += current.offsetLeft;
+　　　　　　current = current.offsetParent;
+　　　　		}
+　　　　		return actualLeft;
+		}, 
   		cartDelete(index){
   			this.cartList.splice(index,1);
   			//购物车空置，显示提示信息

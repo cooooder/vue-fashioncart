@@ -50,10 +50,16 @@
 	display: block;
 	clear: both;
 }
+@keyframes flash{
+	0%{background:#ffffff;}
+	50%{background:rgba(68, 194, 141,.3);}
+	100%{background:#ffffff;}
+}
 .cart-item{
 	position: relative;
 	height: 95px;
 	margin-bottom: 10px;
+	animation: flash 1s ease-out;
 }
 .cart-item span {
     color: #393c45;
@@ -225,7 +231,9 @@
   .el-col .hidden{
   	display: none;
   }
- 
+  .el-col {
+  	position: relative;
+  }
   .el-col .close{
   	visibility:hidden;
   	position: absolute;
@@ -236,8 +244,6 @@
   }
   .el-col .clone{
   	visibility: visible;
-  	top:-150px;
-  	left:-190px;
   	width: 33.3px;
   	height: 53.3px;
   	transition: all 1s ease-out;
